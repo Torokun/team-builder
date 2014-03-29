@@ -9,6 +9,11 @@
 #import "TBViewController.h"
 
 @interface TBViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *headCountField;
+@property (weak, nonatomic) IBOutlet UITextField *teamCountField;
+- (IBAction)divTeam:(UIButton *)sender;
+- (IBAction)backgroundTouched:(id)sender;
+
 
 @end
 
@@ -25,4 +30,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)divTeam:(UIButton *)sender {
+    int headCount = [_headCountField.text intValue];
+    int teamCount = [_teamCountField.text intValue];
+    
+    // キーボードを隠す
+    [self.view endEditing:YES];
+    
+    if(headCount < 1) {
+        // TODO エラーメッセージを出す
+        
+        return;
+    } else if(teamCount < 1) {
+        // TODO エラーメッセージを出す
+        
+        return;
+    }
+    // 次の画面へデータを渡す
+}
+
+// 画面タップでキーボードを隠す
+- (IBAction)backgroundTouched:(id)sender {
+    [self.view endEditing:YES];
+}
 @end

@@ -51,12 +51,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbw-dw-pd6">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="3" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pbw-dw-pd6">
                                 <rect key="frame" x="156" y="94" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96688041962951243" green="1" blue="0.30492472516583768" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.99291905936060343" green="1" blue="0.78708794943532512" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="チーム数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIp-mi-Gox">
                                 <rect key="frame" x="31" y="147" width="69" height="21"/>
@@ -72,12 +72,12 @@
                                     <navigationItem title="Team Builder" id="cGv-zL-qSB"/>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-15-cTI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-15-cTI">
                                 <rect key="frame" x="156" y="143" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.96688041960000004" green="1" blue="0.30492472520000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.99291905940000003" green="1" blue="0.78708794940000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="人" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pd-9D-YAj">
                                 <rect key="frame" x="226" y="98" width="17" height="21"/>
@@ -99,15 +99,28 @@
                                 <state key="normal" title="チーム分け">
                                     <color key="titleColor" red="1" green="0.99519935822162098" blue="0.96643948139280322" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="divTeam:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5Fp-iz-uxX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.74169647312310594" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3SF-kl-wC9" appends="YES" id="Q3m-TF-pei"/>
+                        </connections>
                     </view>
                     <connections>
-                        <outlet property="divTeamButton" destination="vIr-oy-KvQ" id="kuN-NU-O2P"/>
+                        <outlet property="headCountField" destination="pbw-dw-pd6" id="de3-B3-4rt"/>
+                        <outlet property="teamCountField" destination="gHN-15-cTI" id="HlE-Cx-zXU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3SF-kl-wC9">
+                    <connections>
+                        <action selector="backgroundTouched:" destination="vXZ-lx-hvc" id="QX8-nS-p3G"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="381" y="596"/>
         </scene>
