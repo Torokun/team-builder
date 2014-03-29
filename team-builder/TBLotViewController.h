@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TBNavigationViewController.h"
 
-@interface TBLotViewController : UIViewController {
+@interface TBLotViewController : TBNavigationViewController {
     int _headCount;
     int _teamCount;
 }

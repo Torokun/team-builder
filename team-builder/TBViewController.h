@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TBNavigationViewController.h"
 #import "TBLotViewController.h"
 
-@interface TBViewController : UIViewController
+@interface TBViewController : TBNavigationViewController
 
 @end
