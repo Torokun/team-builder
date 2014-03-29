@@ -47,10 +47,23 @@
         return;
     }
     // 次の画面へデータを渡す
+    [self performSegueWithIdentifier:@"divSegue" sender:self];
 }
 
 // 画面タップでキーボードを隠す
 - (IBAction)backgroundTouched:(id)sender {
     [self.view endEditing:YES];
+}
+
+// 画面遷移前に呼ばれる
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"divSegue"]) {
+        // データを渡す
+        TBLotViewController *viewCon = segue.destinationViewController;
+        int headCount = [_headCountField.text intValue];
+        int teamCount = [_teamCountField.text intValue];
+        viewCon.headCount = headCount;
+        viewCon.teamCount = teamCount;
+    }
 }
 @end

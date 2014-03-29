@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		910996C618E6D48C0028A5F8 /* TBLotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910996C518E6D48C0028A5F8 /* TBLotViewController.m */; };
 		915D7FC318E3D3C500B7247D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915D7FC218E3D3C500B7247D /* Foundation.framework */; };
 		915D7FC518E3D3C500B7247D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915D7FC418E3D3C500B7247D /* CoreGraphics.framework */; };
 		915D7FC718E3D3C500B7247D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915D7FC618E3D3C500B7247D /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		910996C418E6D48C0028A5F8 /* TBLotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLotViewController.h; sourceTree = "<group>"; };
+		910996C518E6D48C0028A5F8 /* TBLotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLotViewController.m; sourceTree = "<group>"; };
 		915D7FBF18E3D3C500B7247D /* team-builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "team-builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		915D7FC218E3D3C500B7247D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		915D7FC418E3D3C500B7247D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +122,8 @@
 				915D7FD818E3D3C500B7247D /* TBViewController.m */,
 				915D7FDA18E3D3C500B7247D /* Images.xcassets */,
 				915D7FC918E3D3C500B7247D /* Supporting Files */,
+				910996C418E6D48C0028A5F8 /* TBLotViewController.h */,
+				910996C518E6D48C0028A5F8 /* TBLotViewController.m */,
 			);
 			path = "team-builder";
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910996C618E6D48C0028A5F8 /* TBLotViewController.m in Sources */,
 				915D7FD918E3D3C500B7247D /* TBViewController.m in Sources */,
 				915D7FD318E3D3C500B7247D /* TBAppDelegate.m in Sources */,
 				915D7FCF18E3D3C500B7247D /* main.m in Sources */,
@@ -457,6 +463,7 @@
 				915D7FF318E3D3C500B7247D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		915D7FF418E3D3C500B7247D /* Build configuration list for PBXNativeTarget "team-builderTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +472,7 @@
 				915D7FF618E3D3C500B7247D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
