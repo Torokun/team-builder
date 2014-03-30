@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		910996C618E6D48C0028A5F8 /* TBLotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910996C518E6D48C0028A5F8 /* TBLotViewController.m */; };
+		91534BB018E70E2900CE97F0 /* TBNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91534BAF18E70E2900CE97F0 /* TBNavigationViewController.m */; };
+		91534BB318E7128200CE97F0 /* UIIntColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 91534BB218E7128200CE97F0 /* UIIntColor.m */; };
+		91534BB618E7189100CE97F0 /* TBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91534BB518E7189100CE97F0 /* TBNavigationController.m */; };
 		915D7FC318E3D3C500B7247D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915D7FC218E3D3C500B7247D /* Foundation.framework */; };
 		915D7FC518E3D3C500B7247D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915D7FC418E3D3C500B7247D /* CoreGraphics.framework */; };
 		915D7FC718E3D3C500B7247D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 915D7FC618E3D3C500B7247D /* UIKit.framework */; };
@@ -34,6 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		910996C418E6D48C0028A5F8 /* TBLotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLotViewController.h; sourceTree = "<group>"; };
+		910996C518E6D48C0028A5F8 /* TBLotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBLotViewController.m; sourceTree = "<group>"; };
+		91534BAE18E70E2900CE97F0 /* TBNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBNavigationViewController.h; sourceTree = "<group>"; };
+		91534BAF18E70E2900CE97F0 /* TBNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBNavigationViewController.m; sourceTree = "<group>"; };
+		91534BB118E7128200CE97F0 /* UIIntColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIIntColor.h; sourceTree = "<group>"; };
+		91534BB218E7128200CE97F0 /* UIIntColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIIntColor.m; sourceTree = "<group>"; };
+		91534BB418E7189100CE97F0 /* TBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBNavigationController.h; sourceTree = "<group>"; };
+		91534BB518E7189100CE97F0 /* TBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBNavigationController.m; sourceTree = "<group>"; };
 		915D7FBF18E3D3C500B7247D /* team-builder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "team-builder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		915D7FC218E3D3C500B7247D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		915D7FC418E3D3C500B7247D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,8 +127,16 @@
 				915D7FD118E3D3C500B7247D /* TBAppDelegate.h */,
 				915D7FD218E3D3C500B7247D /* TBAppDelegate.m */,
 				915D7FD418E3D3C500B7247D /* Main.storyboard */,
+				91534BB418E7189100CE97F0 /* TBNavigationController.h */,
+				91534BB518E7189100CE97F0 /* TBNavigationController.m */,
+				91534BAE18E70E2900CE97F0 /* TBNavigationViewController.h */,
+				91534BAF18E70E2900CE97F0 /* TBNavigationViewController.m */,
 				915D7FD718E3D3C500B7247D /* TBViewController.h */,
 				915D7FD818E3D3C500B7247D /* TBViewController.m */,
+				910996C418E6D48C0028A5F8 /* TBLotViewController.h */,
+				910996C518E6D48C0028A5F8 /* TBLotViewController.m */,
+				91534BB118E7128200CE97F0 /* UIIntColor.h */,
+				91534BB218E7128200CE97F0 /* UIIntColor.m */,
 				915D7FDA18E3D3C500B7247D /* Images.xcassets */,
 				915D7FC918E3D3C500B7247D /* Supporting Files */,
 			);
@@ -250,7 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910996C618E6D48C0028A5F8 /* TBLotViewController.m in Sources */,
+				91534BB318E7128200CE97F0 /* UIIntColor.m in Sources */,
+				91534BB618E7189100CE97F0 /* TBNavigationController.m in Sources */,
 				915D7FD918E3D3C500B7247D /* TBViewController.m in Sources */,
+				91534BB018E70E2900CE97F0 /* TBNavigationViewController.m in Sources */,
 				915D7FD318E3D3C500B7247D /* TBAppDelegate.m in Sources */,
 				915D7FCF18E3D3C500B7247D /* main.m in Sources */,
 			);
@@ -457,6 +481,7 @@
 				915D7FF318E3D3C500B7247D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		915D7FF418E3D3C500B7247D /* Build configuration list for PBXNativeTarget "team-builderTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +490,7 @@
 				915D7FF618E3D3C500B7247D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
