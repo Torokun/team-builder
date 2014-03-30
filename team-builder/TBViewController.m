@@ -11,6 +11,8 @@
 @interface TBViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *headCountField;
 @property (weak, nonatomic) IBOutlet UITextField *teamCountField;
+@property (weak, nonatomic) IBOutlet UILabel *headCountErrorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *teamCountErrorLabel;
 - (IBAction)divTeam:(UIButton *)sender;
 - (IBAction)backgroundTouched:(id)sender;
 
@@ -37,16 +39,24 @@
     // キーボードを隠す
     [self.view endEditing:YES];
     
+    // エラーメッセージを一旦クリア
+    _headCountErrorLabel.text = @"";
+    _teamCountErrorLabel.text = @"";
+    
     if(headCount < 1) {
-        // TODO エラーメッセージを出す
-        
+        // エラーメッセージを出す
+        _headCountErrorLabel.text = @"人数は1人以上にしてください。";
         return;
     } else if(teamCount < 1) {
-        // TODO エラーメッセージを出す
-        
+        // エラーメッセージを出す
+        _teamCountErrorLabel.text = @"チーム数は1チーム以上にしてください。";
+        return;
+    } else if(headCount < teamCount) {
+        // エラーメッセージを出す
+        _teamCountErrorLabel.text = @"人数以上のチームに分けることはできません。";
         return;
     }
-    // 次の画面へデータを渡す
+    // 次の画面へ移動する
     [self performSegueWithIdentifier:@"divSegue" sender:self];
 }
 
