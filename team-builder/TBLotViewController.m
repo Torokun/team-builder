@@ -41,6 +41,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (NSArray *) lot
+{
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:_headCount];
+    
+    return result;
+}
+
 /*
 #pragma mark - Navigation
 
