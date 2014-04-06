@@ -28,9 +28,12 @@
 {
     [super viewDidLoad];
     // ナビゲーションバー
-    //self.navigationController.navigationBar.translucent = YES;
+    // バーの背景色
     self.navigationController.navigationBar.barTintColor = [UIIntColor colorWithRed:67 green:120 blue:182 alpha:255];
+    // タイトルの色
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIIntColor colorWithRed:234 green:234 blue:234 alpha:255]};
+    // （戻る）ボタンの色
+    self.navigationController.navigationBar.tintColor = [UIIntColor colorWithRed:200 green:200 blue:200 alpha:255];
     
     // View
     self.view.backgroundColor = [UIIntColor colorWithRed:98 green:98 blue:159 alpha:255];

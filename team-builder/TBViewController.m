@@ -74,6 +74,10 @@
         int teamCount = [_teamCountField.text intValue];
         viewCon.headCount = headCount;
         viewCon.teamCount = teamCount;
+        
+        // 遷移後の画面の戻るためのボタンのキャプションを変更する
+        UIBarButtonItem *backBarButtonItem= [[UIBarButtonItem alloc] initWithTitle:@"戻る" style:UIBarButtonItemStylePlain target:nil action:nil];
+        [self.navigationItem setBackBarButtonItem:backBarButtonItem];
     }
 }
 @end
