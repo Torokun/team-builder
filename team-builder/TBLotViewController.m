@@ -7,8 +7,11 @@
 //
 
 #import "TBLotViewController.h"
+#import "UIIntColor.h"
 
 @interface TBLotViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *tipsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *teamLabel;
 
 @end
 
@@ -38,6 +41,10 @@
     for(int i = 0; i < _headCount; i++) {
         NSLog(@"%d : %d", i, [teamDividedArray[i] integerValue]);
     }
+    self.title = @"抽選結果";
+    _tipsLabel.text = @"画面をタップするとチームが分かるよ";
+    _tipsLabel.textColor = [UIIntColor colorWithRed:0 green:0 blue:0 alpha:255];
+    _tipsLabel.backgroundColor = [UIIntColor colorWithRed:255 green:255 blue:255 alpha:255];
 }
 
 - (void)didReceiveMemoryWarning
