@@ -47,7 +47,7 @@
     _isLoted = YES;
 
     // 抽選後画面を更新
-    self.title = @"抽選結果";
+    self.title = @"チーム分け結果";
     _tipsLabel.text = @"画面をタップするとチームが分かるよ";
     _tipsLabel.textColor = [UIIntColor colorWithRed:0 green:0 blue:0 alpha:255];
     _tipsLabel.backgroundColor = [UIIntColor colorWithRed:255 green:255 blue:255 alpha:255];
