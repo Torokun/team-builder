@@ -80,4 +80,15 @@
         [self.navigationItem setBackBarButtonItem:backBarButtonItem];
     }
 }
+
+// 入力文字数を制限する
+- (BOOL) textField:(UITextField *) textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    // 変更前のテキストを取得
+    NSMutableString *tmp = [_teamCountField.text mutableCopy];
+    // 変更後のテキストを取得
+    [tmp replaceCharactersInRange:range withString:string];
+    // 1文字以内であればYESを返す
+    return [tmp length] <= 1;
+}
 @end
