@@ -38,18 +38,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // 各種メンバ変数の初期化
     _isLoted = NO;
     _currentHeadCount = -1;
     _teamDividedArray = NULL;
-    // 渡された値を暫定的にログに出す
-    NSLog(@"%d", _headCount);
-    NSLog(@"%d", _teamCount);
+    // 抽選処理
     _teamDividedArray = [self lot];
     _isLoted = YES;
-    NSLog(@"チーム分け結果");
-    for(int i = 0; i < _headCount; i++) {
-        NSLog(@"%d : %d", i, [_teamDividedArray[i] integerValue]);
-    }
+
+    // 抽選後画面を更新
     self.title = @"抽選結果";
     _tipsLabel.text = @"画面をタップするとチームが分かるよ";
     _tipsLabel.textColor = [UIIntColor colorWithRed:0 green:0 blue:0 alpha:255];
@@ -203,6 +200,7 @@
 */
 
 - (IBAction)bkgTapped:(id)sender {
+    // 抽選結果がある場合のみ処理
     if (_isLoted) {
         _currentHeadCount++;
         if(_currentHeadCount >= _headCount) {
