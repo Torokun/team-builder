@@ -7,8 +7,16 @@
 //
 
 #import "TBLotViewController.h"
+#import "UIIntColor.h"
 
-@interface TBLotViewController ()
+@interface TBLotViewController () {
+    BOOL _isLoted;
+    int _currentHeadCount;
+    NSArray *_teamDividedArray;
+}
+@property (weak, nonatomic) IBOutlet UILabel *tipsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *teamLabel;
+- (IBAction)bkgTapped:(id)sender;
 
 @end
 
@@ -30,14 +38,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _isLoted = NO;
+    _currentHeadCount = -1;
+    _teamDividedArray = NULL;
     // 渡された値を暫定的にログに出す
     NSLog(@"%d", _headCount);
     NSLog(@"%d", _teamCount);
-    NSArray *teamDividedArray = [self lot];
+    _teamDividedArray = [self lot];
+    _isLoted = YES;
     NSLog(@"チーム分け結果");
     for(int i = 0; i < _headCount; i++) {
-        NSLog(@"%d : %d", i, [teamDividedArray[i] integerValue]);
+        NSLog(@"%d : %d", i, [_teamDividedArray[i] integerValue]);
     }
+    self.title = @"抽選結果";
+    _tipsLabel.text = @"画面をタップするとチームが分かるよ";
+    _tipsLabel.textColor = [UIIntColor colorWithRed:0 green:0 blue:0 alpha:255];
+    _tipsLabel.backgroundColor = [UIIntColor colorWithRed:255 green:255 blue:255 alpha:255];
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,6 +111,86 @@
     return result;
 }
 
+- (void) showLotResultWithOrder :(int) order
+{
+    NSString *teamColorString = [self getTeamColorTextWithOrder:order];
+    NSString *teamLabelText = [NSString stringWithFormat:@"%d番目のあなたは\n%@組\nです", order+1 , teamColorString];
+    _teamLabel.text = teamLabelText;
+    _teamLabel.textColor = [UIIntColor colorWithRed:0 green:0 blue:0 alpha:255];
+    _teamLabel.backgroundColor = [UIIntColor colorWithRed:255 green:255 blue:255 alpha:255];
+    self.view.backgroundColor = [self getTeamColorWithOrder:order];
+}
+
+- (NSString *) getTeamColorTextWithOrder:(int) order
+{
+    NSString * returnString = @"灰色";
+    int teamNumber = [_teamDividedArray[order] integerValue];
+    switch (teamNumber) {
+        case 0:
+            returnString = @"白";
+            break;
+        case 1:
+            returnString = @"赤";
+            break;
+        case 2:
+            returnString = @"青";
+            break;
+        case 3:
+            returnString = @"緑";
+            break;
+        case 4:
+            returnString = @"紫";
+            break;
+        case 5:
+            returnString = @"黃";
+            break;
+        case 6:
+            returnString = @"ピンク";
+            break;
+        case 7:
+            returnString = @"黒";
+            break;
+        default:
+            break;
+    }
+    return returnString;
+}
+
+- (UIColor *) getTeamColorWithOrder :(int) order
+{
+    UIColor *returnColor = [UIIntColor colorWithRed:127 green:127 blue:127 alpha:255];
+    int teamNumber = [_teamDividedArray[order] integerValue];
+    switch (teamNumber) {
+        case 0:
+            returnColor = [UIIntColor colorWithRed:255 green:255 blue:255 alpha:255];
+            break;
+        case 1:
+            returnColor = [UIIntColor colorWithRed:255 green:0 blue:0 alpha:255];
+            break;
+        case 2:
+            returnColor = [UIIntColor colorWithRed:0 green:0 blue:255 alpha:255];
+            break;
+        case 3:
+            returnColor = [UIIntColor colorWithRed:0 green:255 blue:0 alpha:255];
+            break;
+        case 4:
+            returnColor = [UIIntColor colorWithRed:255 green:0 blue:255 alpha:255];
+            break;
+        case 5:
+            returnColor = [UIIntColor colorWithRed:255 green:255 blue:0 alpha:255];
+            break;
+        case 6:
+            returnColor = [UIIntColor colorWithRed:255 green:177 blue:177 alpha:255];
+            break;
+        case 7:
+            returnColor = [UIIntColor colorWithRed:0 green:0 blue:0 alpha:255];
+            break;
+        default:
+            break;
+    }
+    return returnColor;
+}
+
 /*
 #pragma mark - Navigation
 
@@ -106,4 +202,13 @@
 }
 */
 
+- (IBAction)bkgTapped:(id)sender {
+    if (_isLoted) {
+        _currentHeadCount++;
+        if(_currentHeadCount >= _headCount) {
+            _currentHeadCount = 0;
+        }
+        [self showLotResultWithOrder:_currentHeadCount];
+    }
+}
 @end

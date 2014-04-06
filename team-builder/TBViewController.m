@@ -45,15 +45,15 @@
     
     if(headCount < 1) {
         // エラーメッセージを出す
-        _headCountErrorLabel.text = @"人数は1人以上にしてください。";
+        _headCountErrorLabel.text = @"人数は1人以上にしてね。";
         return;
-    } else if(teamCount < 1) {
+    } else if(teamCount < 1 || teamCount > 8){
         // エラーメッセージを出す
-        _teamCountErrorLabel.text = @"チーム数は1チーム以上にしてください。";
+        _teamCountErrorLabel.text = @"チーム数は1チーム以上、\n8チーム以下にしてね。";
         return;
     } else if(headCount < teamCount) {
         // エラーメッセージを出す
-        _teamCountErrorLabel.text = @"人数以上のチームに分けることはできません。";
+        _teamCountErrorLabel.text = @"人数以上のチームに分けることはできないよ。";
         return;
     }
     // 次の画面へ移動する
