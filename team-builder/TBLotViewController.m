@@ -142,7 +142,7 @@
             returnString = @"黃";
             break;
         case 6:
-            returnString = @"ピンク";
+            returnString = @"桜";
             break;
         case 7:
             returnString = @"黒";
